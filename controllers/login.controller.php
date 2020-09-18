@@ -14,11 +14,5 @@ if (isset($_POST['login'])  ) {
 
 
 
-
-
-
-
-
-
-require_once 'views/login.view.php' ; 
+require_once 'views/login.view.php' ;
 ?>

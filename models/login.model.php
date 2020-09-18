@@ -7,7 +7,7 @@ function getlogin($pseudo,$password)
         $bdd = getbdd();
 
         $req = $bdd->prepare('SELECT id,pseudo,password FROM users WHERE (pseudo = :pseudo OR email = :pseudo ) AND  active="1"'); 
-        $req->execute(['pseudo'=>$pseudo]); // on viens recupere la valeur pseudo qui est dans la clef pseudo 
+        $req->execute(['pseudo'=>$pseudo]); // on recupere la valeur pseudo qui est dans la clef pseudo 
         
         $userHasBeenFound = $req -> rowCount();
         // echo 'COUCOU   '.$userHasBeenFound; exit; test intermédiaire 
