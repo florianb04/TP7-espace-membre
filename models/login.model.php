@@ -26,15 +26,6 @@ function getlogin($pseudo,$password)
             $errors[] = 'Erreur de login ou de Mot de passe <br/>';
         }
 
-
-
-
-
-
-
-
-
-
     }
 
 

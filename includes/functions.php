@@ -2,8 +2,6 @@
 
 
 
-
-
 // fonction d'unicité
 function is_already_in_use ($field,$value,$table)
     {
@@ -36,14 +34,26 @@ function activ_mail($name,$pseudo,$email)
     {
         // @ permet de masquer les erreurs de la fonctions mail
         $token=sha1($name.$pseudo.$email);
-        if (@mail($email,'activation du compte','Activation du compte, veuillez cliquer sur :'.WEBSITE_URL.'?page=activation&pseudo='.$pseudo.'&token='.$token)    ) {
+        if (@mail($email,'activation du compte','Activation du compte, veuillez cliquer sur: '.WEBSITE_URL.'?page=activation&pseudo='.$pseudo.'&token='.$token)    ) {
             message_flash("Un mail d'activation a été envoyé");
         }
         else {
             message_flash("Probleme d'envoi du mail d'activation","danger");
         }
     }
+    
 
+    function forget_mdp_email($name,$pseudo,$email)
+    {
+        // @ permet de masquer les erreurs de la fonctions mail
+        $token=sha1($name.$pseudo.$email);
+        if (@mail($email,'réinitialisation du mot de passe','réinitialisation du mot de passe, veuillez cliquer sur :'.WEBSITE_URL.'?page=reset_mdp&pseudo='.$pseudo.'&token='.$token)    ) {
+            message_flash("Un mail de réinitialisation a été envoyé");
+        }
+        else {
+            message_flash("Probleme d'envoi du mail de réinitialisation","danger");
+        }
+    }
 
 
 

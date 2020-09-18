@@ -15,6 +15,8 @@
         <input type="password" class="form-control" name="password" placeholder="Votre Mot de passe">
     </div>
 
+    <a href="?page=forget_mdp">Oublie de mot de passe</a>
+
     <button type="submit" class="btn btn-primary" name="login">Se connecter</button>
 
 </form>
