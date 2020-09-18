@@ -16,7 +16,7 @@ function is_already_in_use ($field,$value,$table)
     return $count;
     }
 
-
+// $type='success' is giving a default value if nothing is assigned to this value
 function message_flash($message,$type='success') {
     $_SESSION['message_flash'] = '
         <div class="alert alert-'.$type.' alert-dismissible fade show" role="alert">

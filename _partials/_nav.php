@@ -34,13 +34,7 @@
         <a class="nav-link" href="?page=login">Connexion</a>
       </li>
 
-      <?php } 
-      
-      echo "<pre>";
-      print_r($_SESSION);
-      echo "</pre>";
-
-      ?>
+      <?php } ?>
 
     </ul>
   </div>
